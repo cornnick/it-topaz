@@ -9,33 +9,32 @@ darkblue #2F498A;
 
 
 body{
-    background-color: #E6F3FF;
-    font-family: 'Quicksand', sans-serif;
-    color: #7C838A;
+  background-color: #E6F3FF;
+  font-family: 'Quicksand', sans-serif;
+  color: #7C838A;
 }
 
 table, th, td{
-    border: 1px solid black;
+  border: 1px solid black;
+}
+
+/* unvisited link */
+  a:link {
+    color: #2F498A;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: #E3B2AF;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #5685FC;
+  }
+  
+  /* selected link or click on phones*/
+  a:active {
+    color: #5685FC;
   }
 
- /* unvisited link */
-    a:link {
-      color: #2F498A;
-    }
-    
-    /* visited link */
-    a:visited {
-      color: #5685FC;
-    }
-    
-    /* mouse over link */
-    a:hover {
-      color: #5685FC;
-    }
-    
-    /* selected link or click on phones*/
-    a:active {
-      color: #5685FC;
-    }
-
-  
