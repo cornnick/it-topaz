@@ -1,6 +1,16 @@
+/* Color Theme Swatches in Hex
+.Personal-Yellow-Haze-Grey-1-hex { color: #F9ED32; }
+.Personal-Yellow-Haze-Grey-2-hex { color: #C3B2AF; }
+.Personal-Yellow-Haze-Grey-3-hex { color: #B0BAC3; }
+.Personal-Yellow-Haze-Grey-4-hex { color: #7C838A; }
+.Personal-Yellow-Haze-Grey-5-hex { color: #E6F3FF; }
+*/
+
+
 body{
-    background-color: darkgoldenrod;
+    background-color: #F9ED32;
     font-family: 'Quicksand', sans-serif;
+    color: #7C838A;
 }
 
 table {
