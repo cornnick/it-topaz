@@ -3,6 +3,6 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
-table, th, td {
+table {
     border: 1px solid black;
   }
