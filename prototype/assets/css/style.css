@@ -4,6 +4,7 @@
 .Personal-Yellow-Haze-Grey-3-hex { color: #B0BAC3; }
 .Personal-Yellow-Haze-Grey-4-hex { color: #7C838A; }
 .Personal-Yellow-Haze-Grey-5-hex { color: #E6F3FF; }
+darkblue #2F498A;
 */
 
 
@@ -16,3 +17,25 @@ body{
 table, th, td{
     border: 1px solid black;
   }
+
+ /* unvisited link */
+    a:link {
+      color: #2F498A;
+    }
+    
+    /* visited link */
+    a:visited {
+      color: #5685FC;
+    }
+    
+    /* mouse over link */
+    a:hover {
+      color: #5685FC;
+    }
+    
+    /* selected link or click on phones*/
+    a:active {
+      color: #5685FC;
+    }
+
+  

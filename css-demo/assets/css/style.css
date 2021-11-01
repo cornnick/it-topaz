@@ -1,5 +1,41 @@
+/* Color Theme Swatches in Hex
+.Personal-Yellow-Haze-Grey-1-hex { color: #F9ED32; }
+.Personal-Yellow-Haze-Grey-2-hex { color: #C3B2AF; }
+.Personal-Yellow-Haze-Grey-3-hex { color: #B0BAC3; }
+.Personal-Yellow-Haze-Grey-4-hex { color: #7C838A; }
+.Personal-Yellow-Haze-Grey-5-hex { color: #E6F3FF; }
+darkblue #2F498A;
+*/
+
+
 body{
     background-color: #F9ED32;
     font-family: 'Quicksand', sans-serif;
     color: #7C838A;
 }
+
+table, th, td{
+    border: 1px solid black;
+  }
+
+ /* unvisited link */
+    a:link {
+      color: #2F498A;
+    }
+    
+    /* visited link */
+    a:visited {
+      color: #5685FC;
+    }
+    
+    /* mouse over link */
+    a:hover {
+      color: #5685FC;
+    }
+    
+    /* selected link or click on phones*/
+    a:active {
+      color: #5685FC;
+    }
+
+  
