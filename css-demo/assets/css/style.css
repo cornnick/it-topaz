@@ -8,10 +8,30 @@ darkblue #2F498A;
 */
 
 
-body{
+/* 
+#A32812
+#BCF04A - Accent
+#F04E32 - Primary
+*/
+
+/* ---------------Box Sizing----------------- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* ---------------Global Styles----------------- */
+
+body {
   background-color: #E6F3FF;
   font-family: 'Quicksand', sans-serif;
   color: #7C838A;
+  margin: 0px;
 }
 
 table, th, td{
@@ -37,4 +57,51 @@ table, th, td{
   a:active {
     color: #5685FC;
   }
+
+  header.primary{
+    background-color: #F9ED32;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px #000000;
+    /* Long Form */
+    padding-top: 40px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 40px;
+    /*TRBL*/
+    padding:40px 40px 20px 40px;
+    /*Top/Bottom Left/Right*/
+    padding:20px 40px;
+
+  }
+
+  header.primary h1{
+    font-size: 2.8rem;
+    margin: 20px 0px;
+  }
+
+  /* 
+Unit	  Description	
+em -	  Relative to the font-size of the element (2em means 2 times the size of the current font)	
+ex -	  Relative to the x-height of the current font (rarely used)	
+ch -    Relative to the width of the "0" (zero)	
+rem	-   Relative to font-size of the root element	
+vw -   	Relative to 1% of the width of the viewport*	
+vh -    Relative to 1% of the height of the viewport*	
+vmin -  Relative to 1% of viewport's* smaller dimension	
+vmax -	Relative to 1% of viewport's* larger dimension	
+%	-     Relative to the parent element 
+*/
+
+header.primary h1 a{
+  color:#fff;
+  text-decoration:none; /*REMOVES UNDERLINE*/
+}
+
+header.primary h2{
+  font-size: 2rem;
+  /* Top | Left/Right | Bottom */
+  margin: 20px auto 20px;
+}
+
 
