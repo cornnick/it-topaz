@@ -1,6 +1,12 @@
+.carouselExampleCaptions{ height: 26rem;
+
+}
+
+
+
 .carousel-item {
     height: 26rem;
-    
+
 }
 
 .carousel-caption {
