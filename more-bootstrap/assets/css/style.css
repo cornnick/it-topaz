@@ -1,20 +1,38 @@
-.carouselExampleCaptions{ height: 26rem;
+.carouselExampleCaptions{ height: 28rem;
 
 }
 
 
 
 .carousel-item {
-    height: 26rem;
+    height: 28rem;
 
 }
 
-.carousel-caption {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right:0;
-    padding-bottom: 20px;
+.carousel-caption{
+    text-align: left;
+    margin-left: 20rem;
+    margin-right:20rem;
+}
 
+.carousel-caption h5 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(8, 39, 59);
+    background-color: rgba(95, 158, 160, 0.676);
+    display: table;
+    
+}
+
+.carousel-caption p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: rgb(8, 39, 59);
+    background-color: rgba(95, 158, 160, 0.676);
+    display: table;
+    
+    
 }
