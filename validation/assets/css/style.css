@@ -6,3 +6,11 @@
     width:70px;
     margin:2px 0 20px 10px;
 } */
+
+.formlabel {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    padding: 5px;
+    font-weight: bold;
+}
