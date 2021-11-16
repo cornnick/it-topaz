@@ -18,49 +18,72 @@
     <h4>Please fill out the form below</h4>
 
  <form id="patientRegistration" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-    <label class="formlabel" for="firstName">First Name:</label>
+    <div>
+	<label class="formlabel" for="firstName">First Name:</label>
     <input type="text" id="firstName" name="firstName" size="30" maxlength="30">
-    
+	</div>
+
+	<div>
     <label class="formlabel" for="middleInitial">Middle Initial: </label>
     <input type="text" id="middleInitial" name="middleInitial" size="30" maxlength="1">
-    
+	</div>
+
+	<div>
     <label class="formlabel" for="lastName">Last Name: </label>
     <input type="text" id="lastName" name="lastName" size="30" maxlength="30">
-    
+	</div>
+
+	<div>
     <label class="formlabel" for="Email">Email: </label>
     <input type="email" id="Email" Name="Email">
-    
+	</div>
+
+	<div>
     <label class="formlabel" >Sex: </label>
     <label class="formlabel"  for="Male"><input type="radio" name="sex" id="Male" value="M">Male</label>
     <label class="formlabel" for="Female"><input type="radio" name="sex" id="Female" value="F">Female</label>
     <label class="formlabel" for="N/A"><input type="radio" name="sex" id="N/A" value="N">N/A</label>
+	</div>
 
+	<div>
     <label class="formlabel" for="Birthday">Birthday:</label>
     <input type="date" id="birthday" name="Birthday" size="8" maxlength="8">
-    
+    </div>
+
+	<div>
     <label class="formlabel" for="Height">Height:</label>
     <input type="text" id="height" name="Height" size="3" maxlength="3">
+	</div>
 
+	<div>
     <label class="formlabel" for="Weight">Weight:</label>
     <input type="text" id="weight" name="weight" size="3" maxlength="3">
+	</div>
 
+	<div>
     <label class="formlabel" for="phoneNumber">Phone Number:</label>
     <input type="number" id="phoneNumber" name="phoneNumber" size="14" maxlength="14">
-    
-    <label class="formlabel" >Martial Status </label>
-    <label class="formlabel" for="Single"><input type="radio" name="Single" id="Single" value="S">Male</label>
-    <label class="formlabel" for="Married"><input type="radio" name="Married" id="Married" value="M">Female</label>
-    <label class="formlabel" for="Divorced"><input type="radio" name="Divorced" id="Divorced" value="D">N/A</label>
-    <label class="formlabel" for="legallySeparated"><input type="radio" name="Legally Separated" id="legallySeparated" value="L">N/A</label>
-    <label class="formlabel" for="Widowed"><input type="radio" name="Widowed" id="N/A" value="W">N/A</label>
+    </div>
 
+	<div>
+    <label class="formlabel" >Martial Status </label>
+    <label class="formlabel" for="Single"><input type="radio" name="Single" id="Single" value="S">Single</label>
+    <label class="formlabel" for="Married"><input type="radio" name="Married" id="Married" value="M">Married</label>
+    <label class="formlabel" for="Divorced"><input type="radio" name="Divorced" id="Divorced" value="D">Divorced</label>
+    <label class="formlabel" for="legallySeparated"><input type="radio" name="Legally Separated" id="legallySeparated" value="L">Legally Separated</label>
+    <label class="formlabel" for="Widowed"><input type="radio" name="Widowed" id="N/A" value="W">Widowed</label>
+	</div>
+
+	<div>
     <label class="formlabel" for="Address">Address:</label>
     <input type="text" id="address" name="address" size="30" maxlength="30">
-
+	</div>
+	
+	<div>
     <label class="formlabel" for="cityStateZip">City/State/Zip:</label>
-    <input type="text" id="City" name="City" size="30" maxlength="30">
-    <input type="select" value="SelectState" name="SelectState">
-    <select>
+    <input type="text" id="City" name="City" placeholder="City" size="30" maxlength="30">
+    <!-- <input type="select" value="SelectState" name="SelectState"> -->
+    <select id="State" value="state" name="state" placeholder="Select State">
 	<option value="AL">Alabama</option>
 	<option value="AK">Alaska</option>
 	<option value="AZ">Arizona</option>
@@ -113,17 +136,22 @@
 	<option value="WI">Wisconsin</option>
 	<option value="WY">Wyoming</option>
 </select>
-<input type="text" id="zip" name="zip" size="5" maxlength="5">
+<input type="text" id="zip" name="zip" placeholder="Zip" size="5" maxlength="5">
+	</div>
 
+	<div>
 <label class="formlabel" >Taking Medications:</label>
     <label for="Yes"><input type="radio" name="Yes" id="Yes" value="Y">Yes</label>
     <label for="No"><input type="radio" name="No" id="No" value="N">No</label>
-    
+	</div>
+<div>
 <label class="formlabel" for="MedicationsList">Medications:</label>
 <input type="text" id="MedicationsList" name="MedicationsList" rows="3" cols="3">
+</div>
 
-
+<div>
     <input type="submit" value="Submit" Name="SubmitButton">
+</div>
     </form>
 
 </div>
