@@ -40,9 +40,9 @@
 
 	<div>
     <label class="formlabel" >Sex: </label>
-    <label class="formlabel"  for="Male"><input type="radio" name="sex" id="Male" value="M">Male</label>
-    <label class="formlabel" for="Female"><input type="radio" name="sex" id="Female" value="F">Female</label>
-    <label class="formlabel" for="N/A"><input type="radio" name="sex" id="N/A" value="N">N/A</label>
+    <label for="Male"><input type="radio" name="sex" id="Male" value="M">Male</label>
+    <label for="Female"><input type="radio" name="sex" id="Female" value="F">Female</label>
+    <label for="N/A"><input type="radio" name="sex" id="N/A" value="N">N/A</label>
 	</div>
 
 	<div>
@@ -65,6 +65,7 @@
     <input type="number" id="phoneNumber" name="phoneNumber" size="14" maxlength="14">
     </div>
 
+	<!--
 	<div>
     <label class="formlabel" >Martial Status </label>
     <label class="formlabel" for="Single"><input type="radio" name="Single" id="Single" value="S">Single</label>
@@ -74,8 +75,21 @@
     <label class="formlabel" for="Widowed"><input type="radio" name="Widowed" id="N/A" value="W">Widowed</label>
 	</div>
 
+	-->
+
 	<div>
-    <label class="formlabel" for="Address">Address:</label>
+		<label class="formlabel" for="maritalStatus">Marital Status:</label>
+		<select id="maritalStatus" value="maritalStatus" name="maritalStatus" placeholder="Select Marital Status">
+			<option value="S">Single</option>
+			<option value="M">Married</option>
+			<option value="D">Divorced</option>
+			<option value="L">Legally Separated</option>
+			<option value="W">Widowed</option>
+		</select>
+	</div>
+
+	<div>
+    <label class="formlabel" for="address">Address:</label>
     <input type="text" id="address" name="address" size="30" maxlength="30">
 	</div>
 	
