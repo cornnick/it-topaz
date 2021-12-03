@@ -20,7 +20,9 @@
  <form id="patientRegistration" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
     <div>
 	<label class="formlabel" for="firstName">First Name:</label>
-    <input type="text" id="firstName" name="firstName" size="30" maxlength="30">
+    <input type="text" id="firstName" name="firstName" size="30" maxlength="30" 
+	data-rule-required="true"  data-msg-required="First Name is Required">
+	<label for="firstName" class="error"></label>
 	</div>
 
 	<div>
@@ -168,7 +170,12 @@
 </div>
     </form>
 
+
 </div>
-  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+
 </body>
 </html>

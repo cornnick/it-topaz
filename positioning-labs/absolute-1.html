@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Positioning Lab</title>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background-color: #ECECEC;
+	font-weight: bold;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #FFF;
+	text-align: center;
+	line-height: 24px;
+}
+#wrapper {
+	background-color: #FFF;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	width: 50vw;
+	height:50vh;
+	margin-right: auto;
+	margin-left: auto;
+    position:relative;
+}
+
+.box-properties{
+  width:11vw;
+  height:35vh;
+ 
+}
+
+#wrapper div:first-child {
+	background-color: #900;
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+#wrapper div:nth-child(2) {
+    background-color: #090;
+  top:0;
+  right:0;
+  position:fixed;
+}
+#wrapper div:nth-child(3){
+	background-color: #00F;
+  bottom:0;
+  left:0;
+  position:fixed;
+}
+#wrapper div:nth-child(4) {
+    background-color: #63C;
+    bottom:0;
+    right:0;
+    position:fixed;
+}
+#wrapper div:last-child {
+    background-color: #666;
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:11vw;
+    height:35vh;
+}
+
+
+
+h1 {
+	color: #000;
+	font-weight: normal;
+	padding: 50px;
+}
+
+</style>
+</head>
+
+<body>
+<h1>Absolute Positioning 1</h1>
+<div id="wrapper" class="box-properties">
+ <div id="red" class="box-properties">Red</div>
+  <div id="green" class="box-properties">Green</div>
+  <div id="blue" class="box-properties">Blue</div>
+  <div id="purple" class="box-properties">Purple</div>
+  <div id="footer" class="box-properties">Footer</div>
+  
+</div>
+</body>
+</html>
