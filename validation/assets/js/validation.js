@@ -1,3 +1,3 @@
-$( "#patientRegistration" ).validate({
+$( "#PatientRegistration" ).validate({
 
 });

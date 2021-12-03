@@ -18,53 +18,56 @@ body {
 }
 #wrapper {
 	background-color: #FFF;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
 	border-top-style: solid;
 	border-right-style: solid;
 	border-bottom-style: solid;
 	border-left-style: solid;
-	width: 800px;
+	width: 80vw;
+  height:80vh;
 	margin-right: auto;
 	margin-left: auto;
-	padding-top: 20px;
+  position:relative;
 }
-#red {
+
+.box-properties{
+  width:125px;
+  height:125px;
+}
+#wrapper div:first-child {
 	background-color: #900;
-	width: 370px;
-	height:125px;
-	margin-bottom: 20px;
-	margin-left: 20px;
-	float:left;
-	
+  top:0;
+  left:0;
+  position:absolute;
 }
-#green {
+#wrapper div:nth-child(2) {
 	background-color: #090;
-	width: 370px;
-	height:125px;
-	margin-bottom: 20px;
-	margin-left: 20px;
-	float:left;
+  top:0;
+  right:0;
+  position:absolute;
 }
-#blue {
+#wrapper div:nth-child(3) {
 	background-color: #00F;
-	width: 370px;
-	height:125px;
-	margin-bottom: 20px;
-	margin-left: 20px;
-	float:left;
+  bottom:0;
+  left:0;
+  position:absolute;
 }
-#purple {
+#wrapper div:nth-child(4) {
 	background-color: #63C;
-	width: 370px;
-	height:125px;
-	margin-bottom: 20px;
-	margin-left: 20px;
-	float:left;
+  bottom:0;
+  right:0;
+  position:absolute;
 }
-#footer {
+#wrapper div:last-child {
 	background-color: #666;
-	width: 760px;
-	margin:20px; 
-	clear:both;
+  position:absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  
 }
 h1 {
 	color: #000;
@@ -75,13 +78,13 @@ h1 {
 </head>
 
 <body>
-<h1>Float 1</h1>
+<h1>Absolute Positioning 2</h1>
 <div id="wrapper">
-  <div id="red">Red</div>
-  <div id="green">Green</div>
-  <div id="blue">Blue</div>
-  <div id="purple">Purple</div>
-  <div id="footer">Footer</div>
+  <div id="red" class="box-properties">Red</div>
+  <div id="green" class="box-properties">Green</div>
+  <div id="blue" class="box-properties">Blue</div>
+  <div id="purple" class="box-properties">Purple</div>
+  <div id="footer" class="box-properties">Footer</div>
 </div>
 </body>
 </html>
