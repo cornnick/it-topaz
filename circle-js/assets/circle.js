@@ -37,7 +37,7 @@ function displayResults() {
     //calculate area
     area = calcArea(radiusfp)
 
-    //displauy area
+    //display area
     document.getElementById("area").innerHTML = area.toString();
 
     }
