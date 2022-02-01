@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <form id="CircleForm">
+    <form id="CircleForm" onsubmit="return false;">
         <h2>Circle Calculations</h2>
         <label for="radius" class="formlabel">Enter radius of a circle:</label>
         <input type="text" id="radius" name="radius"
@@ -102,7 +102,7 @@ function calcCircumference (radiusvalue)
 
 function calcArea (radiusvalue)
 {
-    return (Math.PI)(radiusvalue) * (radiusvalue);
+    return (Math.PI) * (radiusvalue) * (radiusvalue);
 }
 
 function clearForm()
