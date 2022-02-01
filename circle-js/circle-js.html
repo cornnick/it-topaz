@@ -41,7 +41,7 @@
         <label for="area" class="formlabel">Area:</label><span id="area"></span><br>
         <br><br>
         <input type="submit" value="Calculate" id="btnSubmit" onclick="displayResults()">
-        <input type="submit" value="Clear" id="btnSubmit">
+        <input type="submit" value="Clear" id="btnClear" onclick="clearForm()" formnovalidate>
     </form>
 </body>
 <script>
@@ -109,8 +109,8 @@ function clearForm()
 {
     document.getElementById("radius").value = "";
     document.getElementById("radiuserror").innerHTML = "";
-    document.getElementById("diameter").value = "";
-    document.getElementById("circumference").value = "";
+    document.getElementById("diameter").innerHTML = "";
+    document.getElementById("circumference").innerHTML = "";
     document.getElementById("area").innerHTML = "";
 }
 
