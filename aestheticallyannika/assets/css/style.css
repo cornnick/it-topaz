@@ -153,3 +153,7 @@ body {
 background-color: rgb(195,133,179);
 
 }
+
+nav ul a{
+   color: rgb(195,133,179) !important;
+}
