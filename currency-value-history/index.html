@@ -8,6 +8,9 @@
     <meta name="keywords" content="HTML, CSS,JavaScript, AJAX, jQuery">
     <meta name="author" content="Bruce Bauer">
     <title>Polygon - Company Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;500&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -36,7 +39,8 @@
                     <option value="JPY">Japanese Yen</option>
                 </select>
 
-            <label class="error" for="StockSymbol" id="StockSymbolError"></label><br>
+            <label class="error" for="convertTo" id="CurrencyError"></label>
+            <br>
             <label class="formlabel">From Date:</label>
             <input type="date" name="FromDate" id="FromDate" 
                 data-rule-required="true" data-msg-required="From Date is Required">
@@ -53,36 +57,11 @@
             <input type="button" value="Clear" id="Clear" name="Clear" onclick="ClearForm();">
             <hr>
             <br>
-            <label for="company" class="formlabel">Company: </label>
-            <span id="company"></span><br>
-            <label for="address" class="formlabel">Address: </label>
-            <span id="address"></span><br>
-            <label for="employees" class="formlabel">Employees: </label>
-            <span id="employees"></span><br>
-            <label for="ceo" class="formlabel">CEO: </label>
-            <span id="ceo"></span><br>
-            <label for="url" class="formlabel">URL: </label>
-            <a id="url"></a><br>
-            <label for="logo" class="formlabel">Logo: </label>
-            <img id="logo"><br>
-            <hr>
-
-            <div class="clearfix">
-                <div class="img-container">
-                    <span id="StockValueTable"></span>
-                </div>
-                <div class="img-container">
-                    <span id="StockVolumeTable"></span>
-                </div>
-            </div>
-            <hr>
             
             <div class="clearfix">
                 <div class="img-container">
+                    <h2 id="title"></h2>
                     <canvas id="chartjs-0" width="400" height="400"></canvas>
-                </div>
-                <div class="img-container">
-                    <canvas id="chartjs-1" width="400" height="400"></canvas>
                 </div>
             </div>
         </div>

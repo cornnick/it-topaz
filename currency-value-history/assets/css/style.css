@@ -1,3 +1,8 @@
+body{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+
 .formcontainer {
     width: 1000px;
     padding: 5px;
@@ -39,4 +44,10 @@ tr:nth-child(even) {
   content: "";
   clear: both;
   display: table;
+}
+
+input, select
+{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
 }

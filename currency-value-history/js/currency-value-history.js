@@ -10,13 +10,14 @@ async function GetCurrency() {
     // If all of the form elements are valid, the get the form values
     if (form.valid()) {
         
-        var StockSymbol = document.getElementById("StockSymbol").value;
+        var baseCurrency = document.getElementById("baseCurrency").value;
+        var convertTo = document.getElementById("convertTo").value;
         var apiKey = "TLIlh7obKb74mOpOpQnBOoNDeGnqQ2Gj"
         var FromDate = document.getElementById("FromDate").value;
         var ToDate = document.getElementById("ToDate").value;
 
         /* URL for AJAX Call */
-        var myURL1 = "https://api.polygon.io/v1/meta/symbols/" + StockSymbol + "/company?apiKey=" + apiKey;
+        var myURL1 = "https://api.polygon.io/v2/aggs/ticker/C:" + baseCurrency + convertTo + "/range/1/day/" + FromDate + "/" + ToDate + "?adjusted=true&sort=asc&limit=120&apiKey=" + apiKey;
         /* Make the AJAX call */
         var msg1Object = await fetch(myURL1);
         /* Check the status */
@@ -26,96 +27,40 @@ async function GetCurrency() {
             var msg1 = JSON.parse(msg1JSONText);
             /* Your code to process the result goes here - 
                display the returned message */
-            document.getElementById("company").innerHTML = msg1.name;
-            document.getElementById("address").innerHTML = msg1.hq_address;
-            document.getElementById("employees").innerHTML = msg1.employees;
-            document.getElementById("ceo").innerHTML = msg1.ceo;
-            document.getElementById("url").innerHTML = msg1.url;
-            document.getElementById("url").href = msg1.url;
-            document.getElementById("logo").src = msg1.logo;
+               var currencyDate = [];
+               var currencyValue = [];
+               var numdays = msg1.results.length;
+               if (numdays > 0) {
+                   for (var i = 0; i < numdays; i++) {
+                       /* currency value */
+                       currencyValue[i] = msg1.results[i].c;
+                       /* date is in Unix milleseconds - create a temporary date variable */
+                       var tempdate = new Date(msg1.results[i].t);
+                       /* extract the date string from the value */
+                       currencyDate[i] = tempdate.toLocaleDateString();
+                   }
+               }
         }
+
+
         else {
             /* AJAX complete with error - probably invalid stock ticker symbol */
                 /* Your code to process the result goes here - 
                    display the returned message */
-            alert("Stock Not Found - Status: " + msg1Object.status)
+            alert("Currency Not Found - Status: " + msg1Object.status)
             return;
         }        
  
-        /* URL for AJAX Call */
-        var myURL2 = "https://api.polygon.io/v2/aggs/ticker/" + StockSymbol + "/range/1/day/" + FromDate + "/" + ToDate + "?unadjusted=false&sort=asc&limit=32&apiKey=" + apiKey;
-        /* Make the AJAX call */
-        var msg2Object = await fetch(myURL2);
-        /* Check the status */
-        if (msg2Object.status >= 200 && msg2Object.status <= 299) {            
-            var msg2JSONText = await msg2Object.text();
-            // Parse the JSON string into an object
-            var msg2 = JSON.parse(msg2JSONText);
-            /* Your code to process the result goes here - 
-               display the returned message */
-                /* Your code to process the result goes here  
-                    display the returned message */
-                var stockdate = [];
-                var stockvalue = [];
-                var stockvolume = [];
-                var numdays = msg2.results.length;
-                if (numdays > 0) {
-                    for (var i = 0; i < numdays; i++) {
-                        /* stock close value */
-                        stockvalue[i] = msg2.results[i].c;
-                        /* stock volume */
-                        stockvolume[i] = msg2.results[i].v;
-                        /* date is in Unix milleseconds - create a temporary date variable */
-                        var tempdate = new Date(msg2.results[i].t);
-                        /* extract the date string from the value */
-                        stockdate[i] = tempdate.toLocaleDateString();
-                    }
-                }
-
-                var stockvaluetable = "";
-                if (numdays > 0) {
-                    stockvaluetable = stockvaluetable + "<table><caption>Stock Price</caption><tr><th>Date</th><th>Price</th></tr>";
-                    for (var i = 0; i < numdays; i++) {
-                        stockvaluetable = stockvaluetable + "<tr><td>" + stockdate[i] + "</td><td>" + stockvalue[i] + "</td></tr>";
-                    }
-                    stockvaluetable = stockvaluetable + "</table>"
-                    document.getElementById("StockValueTable").innerHTML = stockvaluetable;
-                }
-                
-                var stockvolumetable = "";
-                if (numdays > 0) {
-                    stockvolumetable = stockvolumetable + "<table><caption>Stock Volume</caption><tr><th>Date</th><th>Volume</th></tr>";
-                    for (var i = 0; i < numdays; i++) {
-                        stockvolumetable = stockvolumetable + "<tr><td>" + stockdate[i] + "</td><td>" + stockvolume[i] + "</td></tr>";
-                    }
-                    stockvolumetable = stockvolumetable + "</table>"
-                    document.getElementById("StockVolumeTable").innerHTML = stockvolumetable;
-                }
+       document.getElementById("title").innerHTML = baseCurrency + " to " + convertTo;
+               
 
                 var ctx0 = document.getElementById("chartjs-0");
                 var myChart = new Chart(ctx0, {
                     "type":"line",
                     "data": {
-                        "labels": stockdate,
-                        "datasets":[{"label":"Stock Close",
-                        "data": stockvalue,
-                        "fill":false,
-                        "borderColor":"rgb(75, 192, 192)",
-                        "lineTension":0.1}]},
-                        "options":{ 
-                            responsive: false,
-                            maintainAspectRatio: true,
-                        }
-                    }
-                );
-                
-                var ctx1 = document.getElementById("chartjs-1");
-                var myChart = new Chart(ctx1, {
-                    "type":"line",
-                    "data": {
-                        "labels": stockdate,
-                        "datasets":[{"label":"Stock Volume",
-                        "data": stockvolume,
+                        "labels": currencyDate,
+                        "datasets":[{"label":"One " + baseCurrency + " to " + convertTo,
+                        "data": currencyValue,
                         "fill":false,
                         "borderColor":"rgb(75, 192, 192)",
                         "lineTension":0.1}]},
@@ -133,21 +78,16 @@ async function GetCurrency() {
             return
         }
     }
-}
+
 
 function ClearForm() {
-    document.getElementById("StockSymbol").value = "";
+    document.getElementById("baseCurrency").value = "";
+    document.getElementById("convertTo").value = "";
     document.getElementById("FromDate").value = "";
     document.getElementById("ToDate").value = "";
-    document.getElementById("company").innerHTML = "";
-    document.getElementById("address").innerHTML = "";
-    document.getElementById("employees").innerHTML = "";
-    document.getElementById("ceo").innerHTML = "";
-    document.getElementById("url").innerHTML = "";
-    document.getElementById("url").href = "";
-    document.getElementById("logo").src = "";
-    document.getElementById("StockValueTable").innerHTML = "";
-    document.getElementById("StockVolumeTable").innerHTML = "";
+    document.getElementById("CurrencyError").value = "";
+
+    
     
     /* Ugly Code to Erase Canvas */
     var canvas0 = document.getElementById("chartjs-0");
