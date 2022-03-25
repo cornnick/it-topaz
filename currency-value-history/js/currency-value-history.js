@@ -69,8 +69,18 @@ async function GetCurrency() {
                         "options":{
                             responsive: false,
                             maintainAspectRatio: true,
+                            scales: {
+                                yAxes: [
+                                  {
+                                    scaleLabel: {
+                                      labelString: ' ' + convertTo,
+                                      display: true,
+                                    },
+                                  },
+                                ],
+                              },
+                            }
                         }
-                    }
                 );
             
         }
