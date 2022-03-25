@@ -53,6 +53,7 @@ async function GetCurrency() {
     
     
        document.getElementById("title").innerHTML = baseCurrency + " to " + convertTo;
+       
                
 
                 var ctx0 = document.getElementById("chartjs-0");
@@ -65,7 +66,7 @@ async function GetCurrency() {
                         "fill":false,
                         "borderColor":"rgb(75, 192, 192)",
                         "lineTension":0.1}]},
-                        "options":{ 
+                        "options":{
                             responsive: false,
                             maintainAspectRatio: true,
                         }
