@@ -50,7 +50,8 @@ async function GetCurrency() {
             alert("Currency Not Found - Status: " + msg1Object.status)
             return;
         }        
- 
+    
+    
        document.getElementById("title").innerHTML = baseCurrency + " to " + convertTo;
                
 
@@ -74,7 +75,7 @@ async function GetCurrency() {
         }
         else {
             /* AJAX completed with error - probably invalid stock ticker symbol */
-            alert("Stock Not Found - Status: " + msg2Object.status)
+            alert("Stock Not Found - Status: " + msg1Object.status)
             return
         }
     }
@@ -86,6 +87,7 @@ function ClearForm() {
     document.getElementById("FromDate").value = "";
     document.getElementById("ToDate").value = "";
     document.getElementById("CurrencyError").value = "";
+    document.getElementById("title").innerHTML = "";
 
     
     

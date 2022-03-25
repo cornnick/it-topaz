@@ -10,7 +10,7 @@ body{
 
 .formlabel {
     display: inline-block;
-    width: 150px;
+    width: 170px;
     text-align: right;
     padding: 5px;
 }
@@ -37,17 +37,26 @@ tr:nth-child(even) {
 .img-container {
   float: left;
   width: 40%;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 
-.clearfix::after {
+h2#title{
+  margin: 0px 0 8px 0;
+}
+
+hr{
+  margin: 8px 0 0 0;
+}
+
+.clearfix::after{
   content: "";
   clear: both;
   display: table;
 }
 
-input, select
-{
+
+
+input, select{
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
 }
