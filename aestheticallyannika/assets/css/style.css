@@ -35,8 +35,10 @@ body {
   }
 
 .featured-products {
-    
-    margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.701);
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 100px !important;
     max-width: 1200px;
     margin: 0 auto 150px;
     display: grid;
@@ -61,18 +63,34 @@ body {
 
 .featured-products-title {
     font-family: 'Dosis', sans-serif;
+    grid-column: 1 / span 3;
     font-weight: bold;
     text-transform: uppercase;
     color: rgba(255,145,144,1);
-    margin-top: 70px;
+    margin-top: 15px;
     text-align: center;
+
 }
 
 @media (max-width: 1000px) {
 .featured-products {
     grid-template-columns: repeat(2, 1fr);
     }
+.featured-products-title {
+    grid-column: 1 / span 2;
 }
+
+}
+
+@media (max-width: 600px) {
+    .featured-products {
+        grid-template-columns: 1fr;
+        }
+    .featured-products-title {
+        grid-column: 1 / span 1;
+    }
+    
+    }
 
 @media (max-width: 800px) {
 #gradientLogo {
@@ -122,6 +140,8 @@ body {
     padding: 50px;
     border: none;
     border-radius: 15px;
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 #nametitle{
