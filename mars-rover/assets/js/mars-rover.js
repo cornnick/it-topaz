@@ -1,84 +1,93 @@
-async function GetPhotos() {
+function findrover() {
     "use strict";
 
-    // Get a reference to the form - Use the ID of the form
     var form = $("#myform");
-
-    // Validate all of the form elements
+    
     form.validate();
-
-    // If all of the form elements are valid, then get the form values
+    
     if (form.valid()) {
+        
+        var PictureDate = document.getElementById("PictureDate").value;
+        var apiKey = "hSn69UddF27nacAgOwK3lXHi4UflIxltTQsnQDJK";
+        
+        var Rover;
+        if (document.getElementById("Curiosity").checked) {
+            Rover = document.getElementById("Curiosity").value;
+        }
+        if (document.getElementById("Opportunity").checked) {
+            Rover = document.getElementById("Opportunity").value;
+        }
+        if (document.getElementById("Spirit").checked) {
+            Rover = document.getElementById("Spirit").value;
+        }
+       
+        var myURL = "https://api.nasa.gov/mars-photos/api/v1/rovers/" + Rover + "/photos?earth_date=" + PictureDate + "&page=1&api_key=" + apiKey;
 
-        var apiKey = 'hSn69UddF27nacAgOwK3lXHi4UflIxltTQsnQDJK';
+        var myMethod = "GET";
 
-        document.addEventListener('DOMContentLoaded', submitButtonsReady);
+        $(document).ready(function() { 
 
-        function submitButtonsReady() {
-            document.getElementById('search').addEventListener('click', function (event) {
-                var request = new XMLHttpRequest();
-                var date = document.getElementById('photoDate').value;
-                 //change date format using datejs
-                 date.parse(photoDate).toString("YYYY-MM-DD");
-                var roverName = "";
-
-                var buttonStatus1 = document.getElementById('curiosity').checked;
-                var buttonStatus2 = document.getElementById('opportunity').checked;
-                var buttonStatus3 = document.getElementById('spirit').checked;
-
-                if (buttonStatus1 === true) {
-                    roverName = "curiosity";
-                }
-                else if (buttonStatus2 === true) {
-                    roverName = "opportunity";
-                }
-                else {
-                    roverName = "spirit";
-                }
-               
-
-                request.open('GET', 'https://api.nasa.gov/mars-photos/api/v1/rovers/' + roverName + '/photos?earth_date=' + date + '&api_key=' + apiKey, true);
-                request.addEventListener('load', function () {
-                    if (request.status >= 200 && request.status < 400) {
-                        var response = JSON.parse(request.responseText);
-
-                        document.getElementById('imageStatus').textContent = 'Found';
-                        document.getElementById("image" + i).src = response.photos[i].img_src;
-                        document.getElementById('roverCaption').textContent = response.photos[i].rover.name;
-                        document.getElementById('landingCaption').textContent = response.photos[i].rover.landing_date;
-                        document.getElementById('endingCaption').textContent = response.photos[i].rover.max_date;
-
-                    }
-                    else {
-                        console.log("Error in network request: " + request.statusText);
-                    }
-                });
-                document.getElementById('imageStatus').textContent = 'Please try a different date or check your syntax!';
-                request.send(null);
-                event.preventDefault();
+            $.ajax({
+              method: myMethod,
+              url: myURL
             })
+            
+            .done(function( msg ) {
 
-        }
-
-
-        function ClearForm() {
-            document.getElementById("curiosity").value = "";
-            document.getElementById("opportunity").value = "";
-            document.getElementById("spirit").value = "";
-            document.getElementById("photoDate").value = "";
-            document.getElementById("photoDateError").value = "";
-
-
-
-            /* Ugly Code to Erase Canvas */
-            var canvas0 = document.getElementById("chartjs-0");
-            var context0 = canvas0.getContext('2d');
-            context0.clearRect(0, 0, canvas0.width, canvas0.height);
-            var canvas1 = document.getElementById("chartjs-1");
-            var context1 = canvas1.getContext('2d');
-            context1.clearRect(0, 0, canvas1.width, canvas1.height);
-
-        }
+                var numpictures = msg.photos.length;
+                if (numpictures > 0) {
+                    for (var i = 0; i < 25; i++) {
+                        if (i < numpictures) {
+                        // Note how we construct the name for image1, image2, etc...this sets the image source
+                            document.getElementById("image" + i).src = msg.photos[i].img_src;
+                            document.getElementById("anchor" + i).href = msg.photos[i].img_src;
+                        //do something to set the tool tip = msg.photos[i].camera.full_name;
+                            document.getElementById("image" + i).title = msg.photos[i].camera.full_name;
+                            document.getElementById("text1").innerHTML = msg.photos.length + " photos found";
+                            document.getElementById("text2").innerHTML = "Click a photo to display full size";
+                        }
+                        
+                        else
+                        {
+                            document.getElementById("image" + i).src = "#";
+						    document.getElementById("anchor" + i).href = "#";
+						    document.getElementById("image" + i).style.display = "none";
+                        }
+                    }
+                }
+            })
+            
+            .fail(function( msg ) {
+                alert("Rover Not Found - Status: " + msg.status);
+            });
+        });
     }
+}
 
+function clearform() {
+    for (var i = 0; i < 25; i++) {
+    document.getElementById("Curiosity").checked = false;
+    document.getElementById("Opportunity").checked = false;
+    document.getElementById("Spirit").checked = false;
+    document.getElementById("PictureDate").value = "";
+    document.getElementById("RoverError").innerHTML = "";
+    document.getElementById("PictureDateError").innerHTML = "";
+    document.getElementById("image" + i).src = "#";
+    document.getElementById("anchor" + i).href = "";
+    document.getElementById("image" + i).title = "";
+    document.getElementById("text1").innerHTML = "";
+    document.getElementById("text2").innerHTML = "";
+    }
+}
+
+function getCuriosity() {
+    document.getElementById("PictureDate").value = "2012-08-06";
+}
+
+function getOpportunity() {
+    document.getElementById("PictureDate").value = "2004-01-26";
+}
+
+function getSpirit() {
+    document.getElementById("PictureDate").value = "2004-01-05";
 }
