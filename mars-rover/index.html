@@ -46,25 +46,25 @@
       <h2>Select a rover and a photo date:</h2>
       <label class="formlabel">Rover: </label>
       <label for="Curiosity">
-        <input type="radio" onchange="getCuriosity()" name="Rover" id="Curiosity" value="Curiosity"
-          data-rule-required="true" data-msg-required="A Rover is Required">Curiosity
+        <input type="radio" onchange="getCuriosity()" name="roverChoice" id="Curiosity" value="Curiosity"
+          data-rule-required="true" data-msg-required="Rover Choice is Required">Curiosity
       </label>
       <label for="Opportunity">
-        <input type="radio" onchange="getOpportunity()" name="Rover" id="Opportunity" value="Opportunity">Opportunity
+        <input type="radio" onchange="getOpportunity()" name="roverChoice" id="Opportunity" value="Opportunity">Opportunity
       </label>
       <label for="Spirit">
-        <input type="radio" onchange="getSpirit()" name="Rover" id="Spirit" value="Spirit">Spirit
+        <input type="radio" onchange="getSpirit()" name="roverChoice" id="Spirit" value="Spirit">Spirit
       </label>
-      <label for="Rover" class="error" id="RoverError"></label>
+      <label for="roverChoice" class="error" id="roverError"></label>
       <br><br>
 
-      <label class="formlabel" for="PictureDate">Picture Date: </label>
-      <input type="date" id="PictureDate" name="PictureDate" data-rule-required="true"
-        data-msg-required="Date is Required">
-      <label class="error" for="PictureDate" id="PictureDateError"></label>
+      <label class="formlabel" for="photoDate">Picture Date: </label>
+      <input type="date" id="photoDate" name="photoDate" data-rule-required="true"
+        data-msg-required="Please choose a date.">
+      <label class="error" for="photoDate" id="photoDateError"></label>
       <br><br>
 
-      <input type="button" value="Search" name="Search" onclick="findrover();">
+      <input type="button" value="Search" name="Search" onclick="getPhotos();">
       <input type="button" value="Clear" name="Clear" onclick="clearform();" novalidate="">
       <p id="text1"></p>
       <p id="text2"></p>
