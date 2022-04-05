@@ -1,0 +1,67 @@
+p {
+    color: navy;
+    text-align: left;
+    font-family: "Courier New";
+}
+
+h1 {
+    color: tomato;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+a:link {
+    color: darkslategrey;
+}
+
+a:visited {
+    color: darkcyan;
+}
+
+a:hover {
+    color: aliceblue;
+}
+
+.roundedLogo {
+    border-radius: 30px;
+    background-color: rgba(240, 248, 255, .18);
+    padding: 20px;
+}
+
+.circle {
+    border-radius: 70% 60% 25% 25%;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.imgtext {
+    position: absolute;
+    top: 4%;
+    left: 44%;
+}
+
+.button {
+    background-color: rgb(140, 193, 240);
+    border-radius: 25px 40px 25px 40px;
+    border: #000000 2px solid;
+    color: darkslategray;
+    font-size: 20px;
+    display: inline-block;
+    padding: 7px;
+}
+
+.buttonC {
+    background-color: rgb(140, 193, 240);
+    border-radius: 50%;
+    border: #000000 2px solid;
+    color: darkslategray;
+    font-size: 20px;
+    display: inline-block;
+    padding: 50px 15px;
+}
