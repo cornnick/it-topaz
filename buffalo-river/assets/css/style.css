@@ -1,0 +1,16 @@
+canvas {
+    display: block;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px black solid;
+
+}
+
+@media screen and (min-width: 1200px) {
+    /* Styles for Desktops */
+    .charts-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+  }
