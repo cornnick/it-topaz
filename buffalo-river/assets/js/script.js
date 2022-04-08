@@ -44,12 +44,40 @@ async function displayLevels() {
             "labels": dates,
             "datasets": [{
                 "data": values,
+                "label": sitecode,
                 fill: false,
             }]
         },
-        "options": {
+        "options":{ 
             responsive: false,
             maintainAspectRatio: true,
+            title: {
+                display: true,
+                text: sitename ,
+                fontSize : 18
+            },
+
+            legend: {
+                display: false
+             },
+             
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    time: {
+                            displayFormats: {
+                            day: 'MMM D'
+                        }
+                    }
+                }],
+                
+        yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: siteDescription        
+    }
+    }]
+        }
         }
     });
 
@@ -78,9 +106,36 @@ async function displayLevels() {
                 fill: false,
             }]
         },
-        "options": {
+        "options":{ 
             responsive: false,
             maintainAspectRatio: true,
+            title: {
+                display: true,
+                text: sitename ,
+                fontSize : 18
+            },
+
+            legend: {
+                display: false
+             },
+            
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    time: {
+                            displayFormats: {
+                            day: 'MMM D'
+                        }
+                    }
+                }],
+                
+        yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: siteDescription        
+    }
+    }]
+        }
         }
     });
 
@@ -109,12 +164,38 @@ async function displayLevels() {
                 fill: false,
             }]
         },
-        "options": {
+        "options":{ 
             responsive: false,
             maintainAspectRatio: true,
+            title: {
+                display: true,
+                text: sitename ,
+                fontSize : 18
+            },
+
+            legend: {
+                display: false
+             },
+             
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    time: {
+                            displayFormats: {
+                            day: 'MMM D'
+                        }
+                    }
+                }],
+                
+        yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: siteDescription        
+    }
+    }]
+        }
         }
     });
-
 
 /* Site 4 */
     /* fLen contains the length of the array (number of values) */
@@ -140,9 +221,36 @@ async function displayLevels() {
                 fill: false,
             }]
         },
-        "options": {
+        "options":{ 
             responsive: false,
             maintainAspectRatio: true,
+            title: {
+                display: true,
+                text: sitename ,
+                fontSize : 18
+            },
+
+            legend: {
+                display: false
+             },
+             
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    time: {
+                            displayFormats: {
+                            day: 'MMM D'
+                        }
+                    }
+                }],
+                
+        yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: siteDescription        
+    }
+    }]
+        }
         }
     });
 
