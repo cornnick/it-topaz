@@ -81,6 +81,8 @@ async function displayLevels() {
         }
     });
 
+    var dates = [];
+    var values = [];
 
     /* Site 2 */
     /* fLen contains the length of the array (number of values) */
@@ -139,6 +141,8 @@ async function displayLevels() {
         }
     });
 
+    var dates = [];
+    var values = [];
 
 /* Site 3 */
     /* fLen contains the length of the array (number of values) */
@@ -196,6 +200,9 @@ async function displayLevels() {
         }
         }
     });
+
+    var dates = [];
+    var values = [];
 
 /* Site 4 */
     /* fLen contains the length of the array (number of values) */
