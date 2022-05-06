@@ -3,61 +3,71 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Nicholas Corn</title>
-    <meta name="description" content="Nicholas Corn Portfolio" />
-    <meta name="author" content="Nicholas Corn" />
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
-    <!-- Link to Stylesheet -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-    <!--Adobe Fonts-->
-    <link rel="stylesheet" href="https://use.typekit.net/qhj6dlf.css">
-    <!--CSS Accessible Slick - photo gallery-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css">
+  <meta charset="UTF-8">
+  <title>Nicholas Corn</title>
+  <meta name="description" content="Nicholas Corn Portfolio" />
+  <meta name="author" content="Nicholas Corn" />
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+  <!-- Link to Stylesheet -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Font Awesome for hamburger -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <!--Adobe Fonts-->
+  <link rel="stylesheet" href="https://use.typekit.net/qhj6dlf.css">
+  <!--CSS Accessible Slick - photo gallery-->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css">
 
 </head>
 
 <body>
-    <!--Navbar-->
-    <div class="topnav" id="myTopnav">
-        <a href="/final/index.html">Nicholas Corn</a>
-        <a href="/final/digital-art.html">Digital Art</a>
-        <a href="/final/physical-art.html">Physical Art</a>
-        <a href="/final/javascript.html">Javascript</a>
-        <a href="/final/about.html" class="active">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-      <div class="iframe">
-      <div class="iframe-item">
+  <!--Navbar-->
+  <div class="topnav" id="myTopnav">
+    <a href="/final/index.html">Nicholas Corn</a>
+    <a href="/final/digital-art.html">Digital Art</a>
+    <a href="/final/physical-art.html">Physical Art</a>
+    <a href="/final/javascript.html">Javascript</a>
+    <a href="/final/about.html" class="active">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <!--About Me-->
+  <div class="iframe">
+    <div class="iframe-item">
       <h1>About Nicholas</h1>
       <p>Nicholas Corn is a Web Design & Development major at UA Little Rock.</p>
-      <p>He has a passion for full-stack web development, but also loves woodworking, drawing, graphic design, and pretty much any form of art. </p>
-      <p>He lives in Bryant, AR but recently bought a house in Alexander, AR and is working on renovating the home in his spare time.</p>
+      <p>He has a passion for full-stack web development, but also loves woodworking, drawing, graphic design, and
+        pretty much any form of art. </p>
+      <p>He lives in Bryant, AR but recently bought a house in Alexander, AR and is working on renovating the home in
+        his spare time.</p>
       <p>He is currently a Bartender & Server at the locally owned restaurant, Copper Mule. </p>
-      <p>Commissions are open and available for any web development or woodworking inquiries. Simply fill out the form on this page, or click the button below to send me an email, and I'll get back to you as soon as possible.</p>
+      <p>Commissions are open and available for any web development or woodworking inquiries. Simply fill out the form
+        on this page, or click the button below to send me an email, and I'll get back to you as soon as possible.</p>
+      <!--Opens Users Email-->
       <button class="emailbutton">
-        <a class="emaillink"href="mailto:ntcorn@ualr.edu">Send Email</a>
+        <a class="emaillink" href="mailto:ntcorn@ualr.edu">Send Email</a>
       </button>
+      <!--Opens External Link to my other site-->
       <button class="emailbutton">
-        <a class="emaillink"href="https://cornnick.github.io/it-topaz">View Code Portfolio</a>
+        <a class="emaillink" href="https://cornnick.github.io/it-topaz">View Code Portfolio</a>
       </button>
 
-      </div>
+    </div>
+    <!--Embedded Form-->
+    <div class="iframe-item" id="wufoo-z1k8e7tv14tm9fe"> Fill out my <a
+        href="https://cornnick.wufoo.com/forms/z1k8e7tv14tm9fe">online form</a>. </div>
+  </div>
 
-      <div class="iframe-item" id="wufoo-z1k8e7tv14tm9fe"> Fill out my <a href="https://cornnick.wufoo.com/forms/z1k8e7tv14tm9fe">online form</a>. </div> 
-      </div>
-      
-      
-      <script type="text/javascript"> var z1k8e7tv14tm9fe; (function(d, t) { var s = d.createElement(t), options = { 'userName':'cornnick', 'formHash':'z1k8e7tv14tm9fe', 'autoResize':true, 'height':'580', 'async':true, 'host':'wufoo.com', 'header':'show', 'ssl':true }; s.src = ('https:' == d.location.protocol ?'https://':'http://') + 'secure.wufoo.com/scripts/embed/form.js'; s.onload = s.onreadystatechange = function() { var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return; try { z1k8e7tv14tm9fe = new WufooForm(); z1k8e7tv14tm9fe.initialize(options); z1k8e7tv14tm9fe.display(); } catch (e) { } }; var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr); })(document, 'script'); </script>
-      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/prism.min.js"></script>  
-<script src="assets/js/scripts.js"></script>
+  <!--Wufoo, Jquery, Slick, and Local Scripts-->
+  <script
+    type="text/javascript"> var z1k8e7tv14tm9fe; (function (d, t) { var s = d.createElement(t), options = { 'userName': 'cornnick', 'formHash': 'z1k8e7tv14tm9fe', 'autoResize': true, 'height': '580', 'async': true, 'host': 'wufoo.com', 'header': 'show', 'ssl': true }; s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'secure.wufoo.com/scripts/embed/form.js'; s.onload = s.onreadystatechange = function () { var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return; try { z1k8e7tv14tm9fe = new WufooForm(); z1k8e7tv14tm9fe.initialize(options); z1k8e7tv14tm9fe.display(); } catch (e) { } }; var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr); })(document, 'script'); </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/prism.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
 </body>
 
 

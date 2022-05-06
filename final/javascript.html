@@ -3,72 +3,79 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Nicholas Corn</title>
-    <meta name="description" content="Nicholas Corn Portfolio" />
-    <meta name="author" content="Nicholas Corn" />
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
-    <!-- Link to Stylesheet -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-    <!--Adobe Fonts-->
-    <link rel="stylesheet" href="https://use.typekit.net/qhj6dlf.css">
-    <!--CSS Accessible Slick - photo gallery-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css">
+  <meta charset="UTF-8">
+  <title>Nicholas Corn</title>
+  <meta name="description" content="Nicholas Corn Portfolio" />
+  <meta name="author" content="Nicholas Corn" />
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+  <!-- Link to Stylesheet -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <!--Adobe Fonts-->
+  <link rel="stylesheet" href="https://use.typekit.net/qhj6dlf.css">
+  <!--CSS Accessible Slick - photo gallery-->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css">
 
 </head>
 
 <body>
-    <!--Navbar-->
-    <div class="topnav" id="myTopnav">
-        <a href="/final/index.html">Nicholas Corn</a>
-        <a href="/final/digital-art.html">Digital Art</a>
-        <a href="/final/physical-art.html">Physical Art</a>
-        <a href="/final/javascript.html" class="active">Javascript</a>
-        <a href="/final/about.html">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+  <!--Navbar-->
+  <div class="topnav" id="myTopnav">
+    <a href="/final/index.html">Nicholas Corn</a>
+    <a href="/final/digital-art.html">Digital Art</a>
+    <a href="/final/physical-art.html">Physical Art</a>
+    <a href="/final/javascript.html" class="active">Javascript</a>
+    <a href="/final/about.html">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <!--Javascript Section-->
+  <div class="jshead">
+    <h1>Javascript</h1>
+  </div>
+  <!--Embedded iframes from my site-->
+  <div class="iframe">
+    <div class="iframe-item">
+      <h2>
+        Buffalo River Level AJAX Call
+      </h2>
+      <p>
+        The following tables utilize AJAX calls to pull in real-time data in JSON format from the United States
+        Geological Survey and Chart.js to display that data. Scroll down to see the rest.
+      </p>
+
+      <div>
+        <iframe src="https://cornnick.github.io/it-topaz/buffalo-river/riverlevel.html" width="500px"
+          height="500px"></iframe>
+      </div>
+    </div>
+
+    <div class="iframe-item">
+      <h2>
+        Mars Rover AJAX Call
+      </h2>
+      <p>
+        The following program utilizes AJAX calls to pull in photos taken by various Mars Rovers based on a user's
+        choice of date and rover, and returns all the photos taken from the chosen rover on that chosen date. Users can
+        click for a larger view of a particular photo.
+      </p>
+
+      <div>
+        <iframe src="https://cornnick.github.io/it-topaz/mars-rover/index.html" width="500px" height="500px"></iframe>
       </div>
 
-<div class="jshead">
-  <h1>Javascript</h1>
-</div>
-      <div class="iframe">
-          <div class="iframe-item">
-            <h2>
-              Buffalo River Level AJAX Call
-          </h2>
-          <p>
-            The following tables utilize AJAX calls to pull in real-time data in JSON format from the United States Geological Survey and Chart.js to display that data. Scroll down to see the rest.
-          </p>
 
-                  <div>
-                  <iframe src="https://cornnick.github.io/it-topaz/buffalo-river/riverlevel.html" width="500px" height="500px"></iframe>
-                  </div>
-          </div>
-
-          <div class="iframe-item">
-            <h2>
-              Mars Rover AJAX Call
-          </h2>
-          <p>
-            The following program utilizes AJAX calls to pull in photos taken by various Mars Rovers based on a user's choice of date and rover, and returns all the photos taken from the chosen rover on that chosen date. Users can click for a larger view of a particular photo.
-          </p>
-
-              <div>
-                  <iframe src="https://cornnick.github.io/it-topaz/mars-rover/index.html" width="500px" height="500px"></iframe>
-              </div>
-              
-            
-          </div>
-
-      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/prism.min.js"></script>  
-<script src="assets/js/scripts.js"></script>
+    </div>
+    <!--Jquery Accessible Slick and Local Scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/prism.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 
