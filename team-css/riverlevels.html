@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Buffalo River Adventurers</title>
+  <meta name="description" content="Buffalo River Adventurers love the outdoors and strive to provide outdoor enthusiasts with access to wilderness activities in and around the Buffalo National River. Plan your experience in our cozy, fully furnished cabins, enjoy an adventurous river ride in our canoes, and explore other activities with Buffalo River Adventurers.">
+  <meta name="author" content="Buffalo River Adventurers" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  
+  <!-- Adobe Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/wtn3vfh.css">
+  <script src="https://kit.fontawesome.com/a3c5a6b02f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body onload="displayLevels();">
+  <div class="container">
+ <header id="header" class="primary levels-hero">
+        <div class="fixed-wrap">
+          <div class="banner">
+            <a href="javascript:void(0);" class="icon">
+            <span class="hamburger" onclick="openNav()">&#9776;</span>
+            </a>
+            <nav class="menu">
+              <ul>
+                <li><a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a></li>
+                <li><a href="index.html" class="bralogo">
+                  <img
+                    src="assets/img/icons/brafulllogo.png"
+                    alt="Buffalo River Adventurers Logo"
+                    
+                  />
+                </a></li>
+                <li><a href="planexperience.html">Plan Your Experience</a></li>
+                <li><a href="canoerental.html">Canoeing</a></li>
+                <li><a href="lodging.html">Lodging</a></li>
+                <li><a href="riverlevels.html">River Levels</a></li>
+                <li><a href="contact.html">Contact</a></li>          
+                <li><a href="https://www.google.com/maps/place/36%C2%B001'33.6%22N+93%C2%B021'54.6%22W/@36.0261133,-93.3654997,19z/data=!4m5!3m4!1s0x0:0x5a8038d03ba84f9d!8m2!3d36.026009!4d-93.365169" target="_blank">Directions</a></li>
+              </ul>
+           </nav>
+         </div><!--banner-->
+       </div>
+    <!--full-width images-->
+    <div id="riverlevels" class="bottom-right">
+      <h1>Buffalo River Levels</h1>
+    </div>
+      </header>
+ <section class="river-container">
+  <div class="post-header">
+   <header>
+     <h1>Check Out What's Current</h1>
+
+   </header>
+   <p>Each chart is designed to reflect the water levels of specific river access
+    points of the past 7 days. Water levels are based on USGS data.</p>
+  </div>
+  <div class="chart-container">
+  <div class="charts">
+    <canvas id="chartjs-0"></canvas>
+  </div>
+   
+  <div class="charts">
+    <canvas id="chartjs-1"></canvas>
+  </div>
+  
+  <div class="charts">
+    <canvas id="chartjs-2"></canvas>
+  </div>
+
+  <div class="charts">
+    <canvas id="chartjs-3"></canvas>
+  </div>
+  </div>
+
+</section>
+<aside class="river-level-table">
+  <h2>Float or Not to Float?</h2>
+  <div class="table-wrap">
+  <table class="river-levels-chart">
+    <thead>
+      <!--Design Time Attribute - Remove before Prodution-->
+      <tr>
+        <th scope="row">River Level</th>
+        <th scope="col">Well, Let's Check The Charts!</th>
+      </tr>
+    </thead>
+    <tr>
+    <td>1.2 or less</td>
+    <td>Too low to float.</td>
+    </tr>
+    <tr>
+    <td>1.3 - 1.7</td>
+    <td>Floatable for a short canoe trip but expect some dragging.</td>
+    </tr>
+    <tr>
+    <td>1.8 - 1.9</td>
+    <td>Too low for rafts, but good for low water canoeing.</td>
+    </tr>
+    <tr>
+    <td>2.0 - 2.4</td>
+    <td>Mild white waters and may be challenging for beginners because of rocks and other obstacles.</td>
+    </tr>
+    <tr>
+    <td>3.0 - 3.6</td>
+    <td>Not a casual float, but sailors with experience can manage.</td>
+    </tr>
+    <tr>
+    <td>4.1 - 4.5</td>
+    <td>Too strong for canoes, but depending on what they are, other vessels may go on.</td>
+    </tr>
+     <tr>
+    <td>4.6 - 5.0</td>
+    <td>High difficulty sailing, we do not suggest going unless your skills are confirmed.</td>
+    </tr>
+  </table>
+  </div>
+</aside>
+       <div class="button your-plan">
+        <div class="button-container">
+        <a href="">Plan Your Experience</a>
+      </div>
+      </div>
+ <footer>
+  <div class="footer-container">
+  <div class="brand">
+    <h4>Buffalo River Adventurers</h4>
+    <h5>Where Your Adventure Awaits</h5>
+  </div>
+      <div class="location">
+        <address>
+          36°01'33.6"N 93°21'54.6"W
+        </address>
+        <br>
+      </div>
+      <div class="additional-info">
+        <ul>
+          <li><a href="https://www.google.com/maps/place/36%C2%B001'33.6%22N+93%C2%B021'54.6%22W/@36.0261133,-93.3654997,19z/data=!4m5!3m4!1s0x0:0x5a8038d03ba84f9d!8m2!3d36.026009!4d-93.365169" title="Directions are tricky in this area. Here are the Lat/Lon Coordinates and Map links." target="_blank">Directions</a></li>
+          <li><a href="riverlevels.html" class=“button” >Current River Levels</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <ul>
+          <li>Phone</li>
+          <li><a href="contact.html">Contact Us</a></li>
+       </ul>
+      </div>
+      <div class=social-media-links>
+      <h6>&copy; 2022 Buffalo River Adventurers</h6>
+      </div>
+      </div>
+ </footer>
+ <!--fixed to bottom button--> 
+  </div><!--.container-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/prism.min.js"></script> 
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
