@@ -60,6 +60,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox=
   /*Slick gallery*/
   img{
     max-width:100%;
+    border-radius: 10px 30px 10px 30px;
 }
 
 .container{
@@ -67,7 +68,9 @@ background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox=
     width:70vw;
     /* Set Max Content Width */
     max-width:700px;
+    
 }
+
 
 /* Customize Previous/Next/Dots/Autoplay */
 
@@ -102,6 +105,14 @@ h1 {
   color: rgb(29, 67, 138);
 }
 
+h2 {
+  font-family: fenwick, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(29, 67, 138);
+}
+
 /* Paragraphs */
 
 p {
@@ -125,6 +136,118 @@ p {
   border-radius: 10px 20px 10px 20px;
  }
 
+ .gifcontainer{
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(1, 1fr); 
+  gap: 10px 10px; 
+  grid-template-areas: 
+    ". . .";  
+  margin: 10px auto;
+ }
+
+ .gifcontainer div img{
+  
+  max-width:100%;
+  max-height:270px;
+   
+ }
+
+ .gifcontainer div{
+  max-width:100%;
+   
+ }
+ 
+ .featured-products {
+  background-color: rgba(255, 255, 255, 0.701);
+  padding: 15px;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 0px auto 45px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  font-family: fenwick, sans-serif;
+}
+
+.featured-products-title {
+  font-family: fenwick, sans-serif;
+  grid-column: 1 / span 3;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(29, 67, 138);
+  margin-top: 15px;
+  text-align: center;
+
+}
+
+.jshead {
+  font-family: fenwick, sans-serif;
+  grid-column: 1 / span 3;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(29, 67, 138);
+  margin-top: 15px;
+  text-align: center;
+
+}
+
+.featured-products-title-after {
+  font-family: fenwick, sans-serif;
+  grid-column: 1 / span 3;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(29, 67, 138);
+  text-align: center;
+
+}
+
+.featured-product-item {
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+  border: 0px;
+  border-radius: 5px;
+}
+
+.featured-product-item-image {
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 0 !important;
+}
+
+.featured-product-item > .title {
+  font-family: fenwick, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.iframe{
+  background-color: rgba(255, 255, 255, 0.701);
+  padding: 15px;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 0px auto 45px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  font-family: fenwick, sans-serif;
+}
+
+.iframe-item{
+  background-color: rgba(255, 255, 255, 0.701);
+  padding: 15px;
+  border-radius: 15px;
+  max-width: 550px;
+  
+}
+
+
+
+
+
 
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
@@ -141,6 +264,18 @@ p {
     }
     }
   
+    @media screen and (max-width: 1134px) {
+      .iframe {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 20px 10px; 
+        grid-template-areas: 
+        "."; 
+      }
+
+      }
+    
   
 
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
