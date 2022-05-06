@@ -297,6 +297,7 @@ p {
         gap: 20px 10px; 
         grid-template-areas: 
         "."; 
+        max-width: 550px;
       }
 
       }
